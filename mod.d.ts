@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2019 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,22 +16,22 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 2.0
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
-var isCollection = require( '@stdlib/assert-is-collection' );
-var format = require( '@stdlib/error-tools-fmtprodmsg' );
-
-
-// MAIN //
+import { Collection } from '@stdlib/types/object';
 
 /**
 * Tests whether all elements in a collection are truthy.
 *
-* @param {Collection} collection - input collection
-* @throws {TypeError} must provide a collection
-* @returns {boolean} boolean indicating whether all elements are truthy
+* ## Notes
+*
+* -   The function immediately returns upon encountering a falsy value.
+* -   If provided an empty collection, the function returns `true`.
+*
+* @param collection - input collection
+* @returns boolean indicating whether all elements are truthy
 *
 * @example
 * var arr = [ 1, 1, 1, 1, 1 ];
@@ -39,22 +39,9 @@ var format = require( '@stdlib/error-tools-fmtprodmsg' );
 * var bool = every( arr );
 * // returns true
 */
-function every( collection ) {
-	var len;
-	var i;
-	if ( !isCollection( collection ) ) {
-		throw new TypeError( format( '0jhBN', collection ) );
-	}
-	len = collection.length;
-	for ( i = 0; i < len; i++ ) {
-		if ( !collection[ i ] ) {
-			return false;
-		}
-	}
-	return true;
-}
+declare function every( collection: Collection ): boolean;
 
 
 // EXPORTS //
 
-module.exports = every;
+export = every;
