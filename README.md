@@ -52,7 +52,7 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import every from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-every@deno/mod.js';
+import every from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-every@v0.1.0-deno/mod.js';
 ```
 
 #### every( collection )
@@ -100,7 +100,7 @@ var bool = every( [] );
 
 ```javascript
 import randu from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-randu@deno/mod.js';
-import every from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-every@deno/mod.js';
+import every from 'https://cdn.jsdelivr.net/gh/stdlib-js/utils-every@v0.1.0-deno/mod.js';
 
 var bool;
 var arr;
